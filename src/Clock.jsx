@@ -25,7 +25,7 @@ class Clock extends Component {
   }
  
   componentDidMount() {
-    setInterval(() => {
+    this.interval = setInterval(() => {
       this.setState({
         //щоб час змінювався кожну секунду
         time: moment(getTimeWithOffset(props.offset)).format('LTS')
